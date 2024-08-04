@@ -1,16 +1,25 @@
 {% extends 'products/base.html'}
 
 {% block content %}
-<h1>Product List</h1>
-{% include 'products/search_form.html%}
 
-<table class = "table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Category</th>
-        </tr>
-    </thead>
-</table>
+<h2>Product List</h2>
+<div class="search-box">
+    <form method="get">
+        <input type="text" name="q" class="search-input" placeholder="Search products..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<ul class="product-list">
+    {% for product in products %}
+    <li class="product-item">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-category">Category: {{ product.category.name }}</p>
+        <p class="product-price">Price: ${{ product.price }}</p>
+    </li>
+    {% empty %}
+    <li>No products found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
