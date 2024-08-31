@@ -7,10 +7,8 @@ ShopEase is an e-commerce product management system built using Django, Django R
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [API Endpoints](#api-endpoints)
 - [Database Schema](#database-schema)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -72,7 +70,7 @@ Follow these steps to set up the project on your local machine:
 
 8. **Access the Application:**
 
-   - Visit `http://127.0.0.1:8000/` in your web browser to view the application.
+   - Visit `http://127.0.0.1:8000/` in web browser to view the application.
    - Access the admin panel at `http://127.0.0.1:8000/admin/`.
 
 ## Usage
@@ -102,13 +100,6 @@ The application provides the following API endpoints:
   - `PUT /api/categories/<id>/`: Update an existing category.
   - `DELETE /api/categories/<id>/`: Delete a category.
 
-- **Authentication:**
-  - Use token-based authentication for accessing secured endpoints.
-
-### API Testing
-
-- Use tools like Postman to test the API endpoints and ensure proper functionality.
-
 ## Database Schema
 
 The project uses a PostgreSQL database with the following schema:
@@ -131,22 +122,4 @@ The project uses a PostgreSQL database with the following schema:
   - `rating`: Review rating
   - `comment`: Review comment
 
-## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
-
-Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Feel free to customize this README further to suit your project's specifics and any additional features you may add. Let me know if you need more help!
